@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>DesignerGrid.qml</file>
+        <file>FlatButton.qml</file>
+        <file>Home-01.qml</file>
+        <file>assets/images/background.png</file>
+        <file>assets/images/QuickScan.png</file>
+        <file>assets/images/DeepScan.png</file>
+        <file>assets/images/CustomScan.png</file>
+        <file>assets/images/Setting.png</file>
+        <file>Home.qml</file>
+        <file>assets/images/CPU.png</file>
+        <file>InfoTile.qml</file>
+        <file>assets/images/Lock-Earth.png</file>
+        <file>assets/images/Navigation-Right.png</file>
+        <file>assets/images/Previous.png</file>
+    </qresource>
+</RCC>
