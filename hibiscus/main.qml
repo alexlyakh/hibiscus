@@ -42,6 +42,11 @@ Window {
                 name: "Home"
                 index:0
             }
+
+            ListElement {
+                name: "Advanced"
+                index:1
+            }
         }
 
         delegate: Rectangle {
@@ -51,7 +56,7 @@ Window {
 
             Loader {
                 anchors.fill: parent
-                source: "qrc:///Home.qml"
+                source: 0 == index ? "qrc:///Home.qml" : "qrc:///Advanced.qml"
             }
         }
     }

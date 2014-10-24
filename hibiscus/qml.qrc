@@ -15,5 +15,11 @@
         <file>assets/images/Lock-Earth.png</file>
         <file>assets/images/Navigation-Right.png</file>
         <file>assets/images/Previous.png</file>
+        <file>Advanced.qml</file>
+        <file>ProtectionSettings.qml</file>
+        <file>UpdateSettings.qml</file>
+        <file>ScheduleSettings.qml</file>
+        <file>AccountSettings.qml</file>
+        <file>SupportSettings.qml</file>
     </qresource>
 </RCC>

@@ -24,8 +24,8 @@ Rectangle {
             id: iconRectangle
             color: "transparent"
             Layout.alignment: Qt.AlignTop
-            height: 64
-            width: 64
+            height: 32
+            width: 32
 
             Image {
                 id: tileIcon
@@ -59,7 +59,7 @@ Rectangle {
                     text: title
                     horizontalAlignment: Text.AlignLeft
                     font.family: "Seurce Sans Pro"
-                    font.pointSize: 12
+                    font.pointSize: 11
                     font.weight: Font.DemiBold
                     Layout.alignment: Qt.AlignTop
                     wrapMode: Text.WordWrap

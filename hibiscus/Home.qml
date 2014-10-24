@@ -25,7 +25,9 @@ Rectangle {
         visible: true
     }
 
+    // Mask
     Rectangle {
+        id: mask
         color: "transparent" //"#1E75E9"
         opacity: 0.8
         anchors.fill: parent
@@ -52,6 +54,26 @@ Rectangle {
                     color: "transparent"
                     Layout.fillHeight: true
                     Layout.fillWidth: true
+
+                    RowLayout {
+                        id: topRowLayout
+                        anchors.fill: parent
+                        anchors.rightMargin: 82
+                        anchors.topMargin: 0
+                        spacing: 0
+
+                        FlatButton {
+                            id: advancedButton
+                            height: 40
+                            text: "Advanced"
+                            width: 120
+                            Layout.alignment: Qt.AlignRight //| Qt.AlignTop
+
+                            onClicked: {
+                                mainTabViewRoot.currentIndex = 1;
+                            }
+                        }
+                    }
                 }
 
                 Rectangle {
