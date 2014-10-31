@@ -76,6 +76,11 @@ Rectangle {
                         antialiasing: true
                         snapMode: ListView.SnapOneItem
                         orientation: ListView.Vertical
+
+                        //highlight: Rectangle { color: "yellow" }
+                          //       preferredHighlightBegin: 125; preferredHighlightEnd: 125
+                            //     highlightRangeMode: ListView.
+
                         spacing: 60
                         focus: true
                         model: ListModel {
@@ -106,7 +111,7 @@ Rectangle {
                         }
                         delegate: Item {
                             Rectangle {
-                                color: mouseArea.containsMouse || listViewRoot.currentIndex == index ? /*"#5299E7"*/"#3498db" : "transparent"
+                                color: /*mouseArea.containsMouse ||*/ listViewRoot.currentIndex == index ? /*"#5299E7"*/"#3498db" : "transparent"
                                 height: itemRow.height
                                 opacity: 0.9
                                 width: listViewRoot.width
