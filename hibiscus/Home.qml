@@ -4,11 +4,14 @@ import QtQuick.Layouts 1.1
 import QtQuick.Window 2.1
 import QtQuick.Controls.Styles 1.1
 
-Rectangle {
+FocusScope {
+    Rectangle {
     id: root
+    antialiasing: true
     color: "transparent"
     clip: false
     anchors.fill: parent
+    smooth: true
 
     Image {
         id: watermark
@@ -65,7 +68,7 @@ Rectangle {
                         FlatButton {
                             id: advancedButton
                             height: 40
-                            text: "Advanced"
+                            text: qsTr("Advanced")
                             width: 120
                             Layout.alignment: Qt.AlignRight //| Qt.AlignTop
 
@@ -93,9 +96,9 @@ Rectangle {
                         anchors.alignWhenCentered: true
                         anchors.centerIn: parent
                         color: "#ffffff"
-                        text: "Good day, and"
+                        text: qsTr("Good day, and")
                         horizontalAlignment: Text.AlignHCenter
-                        font.family: "Seurce Sans Pro"
+                        font.family: "Source Sans Pro"
                         font.pointSize: 9
                         wrapMode: Text.WordWrap
                         renderType: Text.NativeRendering
@@ -128,9 +131,9 @@ Rectangle {
                         anchors.alignWhenCentered: true
                         anchors.centerIn: parent
                         color: "#ffffff"
-                        text: "Welcome to Hibuscus!"
+                        text: qsTr("Welcome to Hibuscus!")
                         horizontalAlignment: Text.AlignHCenter
-                        font.family: "Seurce Sans Pro"
+                        font.family: "Source Sans Pro"
                         font.pointSize: 22
                         wrapMode: Text.WordWrap
                         renderType: Text.NativeRendering
@@ -150,9 +153,9 @@ Rectangle {
                         anchors.alignWhenCentered: true
                         anchors.centerIn: parent
                         color: "#ffffff"
-                        text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."
+                        text: qsTr("Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.")
                         horizontalAlignment: Text.AlignHCenter
-                        font.family: "Seurce Sans Pro"
+                        font.family: "Source Sans Pro"
                         font.pointSize: 9
                         wrapMode: Text.WordWrap
                         renderType: Text.NativeRendering
@@ -170,17 +173,18 @@ Rectangle {
                     spacing: 30
 
                     FlatButton {
-                        id: quickScanButton
+                        id: fullScanButton
                         height: 40
-                        text: "Quick"
+                        text: qsTr("Full")
                         width: 140
                         Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
                     }
 
                     FlatButton {
-                        id: fullScanButton
+                        id: quickScanButton
+                        focus: true
                         height: 40
-                        text: "Full"
+                        text: qsTr("Quick")
                         width: 140
                         Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
                     }
@@ -188,7 +192,7 @@ Rectangle {
                     FlatButton {
                         id: customScanButton
                         height: 40
-                        text: "Custom"
+                        text: qsTr("Custom")
                         width: 140
                         Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
                     }
@@ -240,33 +244,33 @@ Rectangle {
                     InfoTile {
                         id: totalThreatsBlocked
                         imageSource: "assets/images/CPU.png"
-                        title: "1500+"
-                        textLine1: "threats blocked"
-                        textLine2: "in last two weeks"
+                        title: qsTr("1500+")
+                        textLine1: qsTr("threats blocked")
+                        textLine2: qsTr("in last two weeks")
                     }
 
                     InfoTile {
                         id: totalBadUrlsBlocked
                         imageSource: "assets/images/Lock-Earth.png"
                         title: "500+"
-                        textLine1: "bad sites blocked"
-                        textLine2: "in last two weeks"
+                        textLine1: qsTr("bad sites blocked")
+                        textLine2: qsTr("in last two weeks")
                     }
 
                     InfoTile {
                         id: lastScan
                         imageSource: "assets/images/Previous.png"
                         title: "1 day"
-                        textLine1: "since last"
-                        textLine2: "scheduled scan"
+                        textLine1: qsTr("since last")
+                        textLine2: qsTr("scheduled scan")
                     }
 
                     InfoTile {
                         id: nextScan
                         imageSource: "assets/images/Navigation-Right.png"
-                        title: "6 hours"
-                        textLine1: "till next"
-                        textLine2: "scheduled scan"
+                        title: qsTr("6 hours")
+                        textLine1: qsTr("till next")
+                        textLine2: qsTr("scheduled scan")
                     }
                 }
 
@@ -279,4 +283,5 @@ Rectangle {
             }
         }
     }
+}
 }

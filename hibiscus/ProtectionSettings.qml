@@ -4,10 +4,13 @@ import QtQuick.Layouts 1.1
 import QtQuick.Window 2.1
 import QtQuick.Controls.Styles 1.1
 
-Rectangle {
+FocusScope {
+    Rectangle {
     id: protectionSettingsRoot
+    antialiasing: true
     color: "transparent"
     anchors.fill: parent
+    smooth: true
 
     ColumnLayout {
         id: protectionSettingsColumnLayout
@@ -36,10 +39,10 @@ Rectangle {
                 anchors.alignWhenCentered: true
                 x: 30
                 color: "#726f80"
-                text: "Protection"
+                text: qsTr("Protection")
                 height: parent.height
                 horizontalAlignment: Text.AlignLeft
-                font.family: "Seurce Sans Pro"
+                font.family: "Source Sans Pro"
                 font.pointSize: 16
                 wrapMode: Text.WordWrap
                 renderType: Text.NativeRendering
@@ -55,4 +58,5 @@ Rectangle {
             Layout.fillWidth: true
         }
     }
+}
 }

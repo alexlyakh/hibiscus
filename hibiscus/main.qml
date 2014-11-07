@@ -39,13 +39,13 @@ Window {
 
         model: ListModel {
             ListElement {
-                name: "Home"
-                index:0
+                name: qsTr("Home")
+                index: 0
             }
 
             ListElement {
-                name: "Advanced"
-                index:1
+                name: qsTr("Advanced")
+                index: 1
             }
         }
 
