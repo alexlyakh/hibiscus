@@ -13,11 +13,10 @@ import QtQuick 2.2
         antialiasing: true
         activeFocusOnTab: true
         color: "transparent"
-        border.color: "white"
+        border.color: "transparent"
         focus: true
         opacity: 1
-        border.width: 1.4
-        radius: 4
+        border.width: 0
         width: 96
         height: 25
         smooth: true

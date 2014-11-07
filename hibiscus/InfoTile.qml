@@ -7,6 +7,7 @@ import QtQuick.Controls.Styles 1.1
 //FocusScope {
     Rectangle {
         id: tile
+        activeFocusOnTab: true
         antialiasing: true
         color: "transparent"
         height: 100

@@ -5,13 +5,15 @@ import QtQuick.Window 2.1
 import QtQuick.Controls.Styles 1.1
 
 FocusScope {
-    Rectangle {
-    id: root
-    antialiasing: true
-    color: "transparent"
-    clip: false
     anchors.fill: parent
-    smooth: true
+
+    Rectangle {
+        id: root
+        antialiasing: true
+        color: "transparent"
+        clip: false
+        anchors.fill: parent
+        smooth: true
 
     Image {
         id: watermark
@@ -65,7 +67,7 @@ FocusScope {
                         anchors.topMargin: 0
                         spacing: 0
 
-                        FlatButton {
+                        HyperlinkButton {
                             id: advancedButton
                             height: 40
                             text: qsTr("Advanced")

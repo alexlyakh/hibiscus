@@ -5,6 +5,8 @@ import QtQuick.Window 2.1
 import QtQuick.Controls.Styles 1.1
 
 FocusScope {
+    anchors.fill:  parent
+
     Rectangle {
         id: accountSettingsRoot
         color: "transparent"

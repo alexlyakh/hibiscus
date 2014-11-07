@@ -5,9 +5,11 @@ import QtQuick.Window 2.1
 import QtQuick.Controls.Styles 1.1
 
 FocusScope {
+    anchors.fill: parent
 
     Rectangle {
         id: advancedSettingsRoot
+        activeFocusOnTab: true
         color: "transparent"
         anchors.fill: parent
         smooth: true
@@ -109,10 +111,92 @@ FocusScope {
                             }
                             delegate: Item {
                                 Rectangle {
-                                    color: /*mouseArea.containsMouse ||*/ listViewRoot.currentIndex == index ? /*"#5299E7"*/"#3498db" : "transparent"
+                                    activeFocusOnTab: true
+                                    color: "transparent"
                                     height: itemRow.height
-                                    opacity: 0.9
                                     width: listViewRoot.width
+
+                                    Rectangle {
+                                        id: mask
+                                        anchors.fill: parent
+                                        color: "#5299E7"
+                                        opacity: 0.7
+                                        radius: 4
+                                        visible: false
+                                    }
+
+                                    states: [
+                                        State {
+                                           name: "Hover"
+                                           when: mouseArea.containsMouse && !mouseArea.pressed
+
+                                            PropertyChanges {
+                                              target: mask;
+                                              visible: true
+                                            }
+                                        },
+
+                                        State {
+                                           name: "Selected"
+                                           when: listViewRoot.currentIndex == index && !mouseArea.pressed
+
+                                            PropertyChanges {
+                                              color: "#3498db"
+                                              opacity: 1
+                                              target: mask;
+                                              visible: true
+                                            }
+                                        },
+
+                                        State {
+                                            name: "Focused"
+                                            when: activeFocus
+                                            PropertyChanges {
+                                                target: mask;
+                                                visible: true
+                                                color: "red"
+                                                opacity: 0.5
+                                            }
+                                        },
+
+                                        State {
+                                            name: "Pressed"
+                                            when: mouseArea.pressed
+                                            PropertyChanges {
+                                                target: mask;
+                                                visible: true
+                                                color: "#5299E7"
+                                                opacity: 1
+                                            }
+                                        }/*,
+
+                                        State {
+                                            name: "Default"
+                                            when: activeFocus
+                                            PropertyChanges {
+                                                target: mask;
+                                                visible: true
+                                                color: "green"
+                                                opacity: 0.5
+                                            }
+                                        },
+
+                                        State {
+                                            name: "Disabled"
+                                            when: !enabled
+                                            PropertyChanges {
+                                                target: container;
+                                                opacity: 0.5
+                                            }
+                                        }*/
+                                    ]
+
+                                    transitions: [
+                                        Transition {
+                                            NumberAnimation { target: mask; property: "opacity"; from: 0; to: 1; duration: 350; easing.type: Easing.InOutQuad }
+                                        }
+
+                                    ]
 
                                     Row {
                                         id: itemRow

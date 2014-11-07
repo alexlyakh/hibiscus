@@ -21,5 +21,6 @@
         <file>ScheduleSettings.qml</file>
         <file>AccountSettings.qml</file>
         <file>SupportSettings.qml</file>
+        <file>HyperlinkButton.qml</file>
     </qresource>
 </RCC>

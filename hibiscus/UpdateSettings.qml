@@ -5,12 +5,14 @@ import QtQuick.Window 2.1
 import QtQuick.Controls.Styles 1.1
 
 FocusScope {
-    Rectangle {
-    id: updatesSettingsRoot
-    antialiasing: true
-    color: "transparent"
     anchors.fill: parent
-    smooth: true
+
+    Rectangle {
+        id: updatesSettingsRoot
+        antialiasing: true
+        color: "transparent"
+        anchors.fill: parent
+        smooth: true
 
     ColumnLayout {
         id: updatesSettingsColumnLayout
