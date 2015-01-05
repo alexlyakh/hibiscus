@@ -1,0 +1,33 @@
+{
+  "name": "Hibiscus Antivirus Management Console",
+  "version": "1.0.0",
+  "homepage": "http://www.hibiscusav.com",
+  "authors": [
+    "Alex Lyakh <alexlyakh@yahoo.com>"
+  ],
+  "description": "Management Console maintains remote endpoints",
+  "main": "index.html",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "keywords": [
+    "Hibiscus",
+    "Management",
+    "Console",
+    "Antivirus"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.2",
+    "core-ajax": "Polymer/core-ajax#~0.5.2"
+  }
+}
