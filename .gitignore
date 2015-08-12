@@ -15,6 +15,10 @@
 *.a
 *.lib
 
+# Generated Files
+*.pro.user
+*.pro.user.*
+
 # Executables
 *.exe
 *.out
