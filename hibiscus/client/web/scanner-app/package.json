@@ -1,5 +1,18 @@
 {
+  "name": "hibiscus-scanner-app",
+  "main": "./dist/index.html",
   "private": true,
+  "window": {
+    "frame": true,
+    "toolbar": false,
+    "min_width": 800,
+    "min_height": 600,
+    "width": 800,
+    "height": 600
+  },
+  "dependencies": {
+    "markdown": "0.5.x"
+  },
   "devDependencies": {
     "browser-sync": "^2.7.7",
     "connect-history-api-fallback": "^1.1.0",
